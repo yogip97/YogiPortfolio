@@ -883,7 +883,7 @@
 			<div class="row block-9">
 				<div class="col-md-8">
 					<form action="https://formsubmit.co/el/vagexa" class="bg-light p-4 p-md-5 contact-form needs-validation"
-                                              method="post" novalidate target_"blank">
+                                              method="post" novalidate target="_blank" name="Form" id="Form" data-sitekey="Form hjkhjkhjkhjk">
                                             
 						<div class="row">
 							<div class="col-md-6">
@@ -908,8 +908,8 @@
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-                                                                        <input type="hidden" name="_captcha" value="false">
+									<input type="submit" value="Send Message" class="btn btn-primary py-3 px-5" data-sitekey="6LeO3zwnAAAAAOlJQ4RePB73qug2OWQ1XjBWyYbV">
+                                                                        
 								</div>
 							</div>
 						</div>
@@ -1061,5 +1061,27 @@
                         $('.carousel').carousel();
                     });
                 </script>-->
+                
+                <script src="https://www.google.com/recaptcha/api.js?render=6LeO3zwnAAAAAOlJQ4RePB73qug2OWQ1XjBWyYbV"></script>
+                <script>
+                    $(document).ready(function() {
+                        $("#Form").submit(function(e) {
+                            e.stopPropagation();
+                            e.preventDefault();
+                             let formData = this.dataset.sitekey;
+                             let submitter_btn = $(e.originalEvent.submitter);
+
+                            grecaptcha.ready(function() {
+                                grecaptcha.execute(submitter_btn.data('sitekey'), {
+                                    action: 'submit'
+                                }).then(function(token) {
+                                    // Add your logic to submit to your backend server here.
+                                    consle.log(token);
+                                });
+                            });
+                        });
+                    });
+                </script>
+                
 	</body>
 	</html>
