@@ -879,26 +879,30 @@
 					<p>Enter your information below with brief details and I will be in touch!</p>
 				</div>
 			</div>
-
+                            <!-- action="https://formcarry.com/s/4HRTXBNZ8Vv"-->
 			<div class="row block-9">
 				<div class="col-md-8">
-					<form action="https://formcarry.com/s/4HRTXBNZ8Vv" class="bg-light p-4 p-md-5 contact-form needs-validation"
-                                              method="POST" novalidate target="_blank" name="Form" id="Form">
+                                    <div class="errors"></div>
+					<form  class="bg-light p-4 p-md-5 contact-form needs-validation"
+                                              method="POST" novalidate name="Form" id="Form">
                                             
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
-									<input type="text" name="name" id="name" class="form-control" placeholder="Your Name">
+                                                                        <label for="validationDefault01" class="form-label"></label>
+									<input type="text" name="name" id="validationDefault01" class="form-control" placeholder="Your Name" required>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<input type="text" name="email" id="email" class="form-control" placeholder="Your Email">
+									<label for="validationDefault01" class="form-label"></label>
+                                                                        <input type="text" name="email" id="email" class="form-control" placeholder="Your Email" required value>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<input type="text" name="subject" id="subject" class="form-control" placeholder="Subject">
+                                                                        <label for="validationDefault01" class="form-label"></label>
+                                                                        <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject" required value>
 								</div>
 							</div>
 							<div class="col-md-12">
@@ -1053,6 +1057,7 @@
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 		<script src="js/google-map.js"></script>
 		<script src="js/main.js"></script>
+                <script src="js/validate-forms.js"></script>
 		
                 <script src="js/grt-youtube-popup.js"></script>
                 <script> $(".youtube-link").grtyoutube(); </script>
