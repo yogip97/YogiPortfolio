@@ -869,11 +869,7 @@
 			</div>
 		</div>
 	</section>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://www.google.com/recaptcha/api.js?render=6LeO3zwnAAAAAOlJQ4RePB73qug2OWQ1XjBWyYbV"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script src="https://formsubmit.co/js/app.js" defer=""></script>
-                
+        
 	<section class="ftco-section contact-section ftco-no-pb bg-light" id="contact-section">
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-3">
@@ -886,8 +882,8 @@
 
 			<div class="row block-9">
 				<div class="col-md-8">
-					<form action="https://formsubmit.co/el/vagexa" class="bg-light p-4 p-md-5 contact-form needs-validation"
-                                              method="post" novalidate target="_blank" name="Form" id="Form" data-sitekey="6LdpKIMUAAAAAPH4XLcypBTMPsV7eTWZrznHCndM">
+					<form action="https://formcarry.com/s/4HRTXBNZ8Vv" class="bg-light p-4 p-md-5 contact-form needs-validation"
+                                              method="POST" novalidate target="_blank" name="Form" id="Form">
                                             
 						<div class="row">
 							<div class="col-md-6">
@@ -912,7 +908,7 @@
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<input type="submit" value="Send Message" class="btn btn-primary py-3 px-5" data-sitekey="6LdpKIMUAAAAAPH4XLcypBTMPsV7eTWZrznHCndM">
+									<input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
                                                                         
 								</div>
 							</div>
@@ -966,23 +962,7 @@
 	</section>
 	
         <script>
-                    $(document).ready(function() {
-                        $("#Form").submit(function(e) {
-                            e.stopPropagation();
-                            e.preventDefault();
-                             let formData = this.dataset.sitekey;
-                             let submitter_btn = $(e.originalEvent.submitter);
-
-                            grecaptcha.ready(function() {
-                                grecaptcha.execute(submitter_btn.data('sitekey'), {
-                                    action: 'submit'
-                                }).then(function(token) {
-                                    // Add your logic to submit to your backend server here.
-                                    consle.log(token);
-                                });
-                            });
-                        });
-                    });
+                   
         </script>
         
 	<footer class="ftco-footer ftco-section">
